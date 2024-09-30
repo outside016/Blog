@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --dark--color: #000000;
+  --light--color: #FFFFFF;
+}
+
+body {
+  background-color: var(--dark--color);
+  color: var(--light--color);
+
+}
+
+.profile-card{
+  border: 1px solid var(--light--color);
+  padding: 32px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+}
