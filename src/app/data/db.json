@@ -1,0 +1,37 @@
+{
+  "profiles": [
+    {
+      "id": 0,
+      "username": "string",
+      "avatarUrl": "string",
+      "subscribersAmount": 0,
+      "firstName": "",
+      "lastName": "",
+      "isActive": true,
+      "stack": [],
+      "city": ""
+    },
+    {
+      "id": 1,
+      "username": "string",
+      "avatarUrl": "string",
+      "subscribersAmount": 0,
+      "firstName": "",
+      "lastName": "",
+      "isActive": true,
+      "stack": [],
+      "city": ""
+    },
+    {
+      "id": 2,
+      "username": "string",
+      "avatarUrl": "string",
+      "subscribersAmount": 0,
+      "firstName": "",
+      "lastName": "",
+      "isActive": true,
+      "stack": [],
+      "city": ""
+    }
+  ]
+}
