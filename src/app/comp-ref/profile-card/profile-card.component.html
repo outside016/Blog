@@ -1,28 +1,29 @@
-<div class="profile-card">
-  <div class="avatar-name">
-    <img src="/assets/imgs/ramzes.png" alt="avatar" class="profile-card__avatar">
+@if (profile) {
+  <div class="profile-card">
+    <div class="avatar-name">
+      <img [src]="profile.avatarUrl"
+           [alt]="profile.username"
+           class="profile-card__avatar">
 
-    <div class="profile-card__name">
-      <strong class="h6">Ramzes666</strong>
-      <span>Роман Кушнарев</span>
+      <div class="profile-card__name">
+        <strong class="h6">{{ profile.username }}</strong>
+        <span>{{ profile.firstName }} {{ profile.lastName }}</span>
+      </div>
+    </div>
+
+    <div class="profile-card__description">
+      {{ profile.description }}
+    </div>
+
+    <div class="profile-card__tags">
+      @for (skill of profile.stack; track skill) {
+        <div class="skill-tag">{{ skill }}</div>
+      }
+    </div>
+
+
+    <div class="profile-card__action-btns">
+      <button class="btn">Подписаться</button>
     </div>
   </div>
-
-  <div class="profile-card__description">
-    Роман Кушнарев родился 25 апреля 1999 года. Будучи давним поклонником Dota, он начал свою профессиональную карьеру в 2015 году, присоединившись к ScaryFaceZ.
-    В настоящее время выступает за L1GA TEAM.
-
-
-  </div>
-
-  <div class="profile-card__tags">
-    <div class="skill-tag">VirtusPro</div>
-    <div class="skill-tag">9pandas</div>
-    <div class="skill-tag">Tundra</div>
-    <div class="skill-tag">L1ga</div>
-  </div>
-
-  <div class="profile-card__action-btns">
-    <button class="btn">Подписаться</button>
-  </div>
-</div>
+}
