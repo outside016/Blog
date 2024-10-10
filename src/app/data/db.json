@@ -9,7 +9,7 @@
       "lastName": "Кушнарев",
       "description":"Роман Кушнарев родился 25 апреля 1999 года. Будучи давним поклонником Dota,он начал свою профессиональную карьеру в 2015 году, присоединившись к ScaryFaceZ. В настоящее время выступает за L1GA TEAM.",
       "isActive": true,
-      "stack": ["Courage Gaming","ScaryFaceZ","CIS Rejects","Team Spirit","Team Empire","Virtus.pro","Evil Geniuses","Natus Vincere","CIS Rejects","Virtus.pro","Darkside","9Pandas","L1GA TEAM","Tundra Esports"],
+      "teams": ["Courage Gaming","ScaryFaceZ","CIS Rejects","Team Spirit","Team Empire","Virtus.pro","Evil Geniuses","Natus Vincere","CIS Rejects","Virtus.pro","Darkside","9Pandas","L1GA TEAM","Tundra Esports"],
       "city": ""
     },
     {
@@ -21,7 +21,7 @@
       "lastName": "Сигитов",
       "description":"Денис «Larl» Сигитов (родился 22 января 2002 г.) - российский игрок, который в настоящее время выступает за Team Spirit.",
       "isActive": true,
-      "stack": ["VP.Prodigy","Winstrike Team","BetBoom Team","L1ga"],
+      "teams": ["VP.Prodigy","Winstrike Team","BetBoom Team","L1ga"],
       "city": ""
     },
     {
@@ -33,7 +33,7 @@
       "lastName": "Халилов",
       "description":"Магомед «Collapse» Халилов (родился 25 февраля 2002 года) — российский игрок, который в настоящее время выступает за Team Spirit.",
       "isActive": true,
-      "stack": ["Cascade","Yellow Submarine","Team Spirit"],
+      "teams": ["Cascade","Yellow Submarine","Team Spirit"],
       "city": ""
     },
     {
@@ -45,7 +45,7 @@
       "lastName": "Найдёнов",
       "description":"Yaroslav «Miposhka» Naidenov (born November 30, 1997) is a Russian player who is currently playing for Team Spirit.",
       "isActive": true,
-      "stack": ["Yellow Submarine","PRIES","Yellow Submarine","Enso","Team Empire","The ReaL DeaL","Team Singularity","HellRaisers","Yellow Submarine","Team Spirit"],
+      "teams": ["Yellow Submarine","PRIES","Yellow Submarine","Enso","Team Empire","The ReaL DeaL","Team Singularity","HellRaisers","Yellow Submarine","Team Spirit"],
       "city": ""
     }
   ]

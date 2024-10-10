@@ -16,8 +16,8 @@
     </div>
 
     <div class="profile-card__tags">
-      @for (skill of profile.stack; track skill) {
-        <div class="skill-tag">{{ skill }}</div>
+      @for (teams of profile.teams; track teams) {
+        <div class="skill-tag">{{ teams }}</div>
       }
     </div>
 
