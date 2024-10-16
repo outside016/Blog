@@ -48,5 +48,11 @@
       "teams": ["Yellow Submarine","PRIES","Yellow Submarine","Enso","Team Empire","The ReaL DeaL","Team Singularity","HellRaisers","Yellow Submarine","Team Spirit"],
       "city": ""
     }
+  ],
+  "auth": [
+    {
+      "das": "asdas",
+      "1daasds": "asdas"
+    }
   ]
 }
