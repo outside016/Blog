@@ -9,10 +9,10 @@ export class ProfileService {
 
   http = inject(HttpClient)
 
-  baseApiUrl = 'http://localhost:3000'
+  baseApiUrl = 'https://icherniakov.ru/yt-course/'
 
   getTestAccounts(){
-    return this.http.get<Profile[]>(`${this.baseApiUrl}/profiles`)
+    return this.http.get<Profile[]>(`${this.baseApiUrl}account/test_accounts`)
   }
 
 }

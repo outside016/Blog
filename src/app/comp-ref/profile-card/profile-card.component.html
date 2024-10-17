@@ -1,7 +1,7 @@
 @if (profile) {
   <div class="profile-card">
     <div class="avatar-name">
-      <img [src]="profile.avatarUrl"
+      <img [src]="profile.avatarUrl | imgUrl"
            [alt]="profile.username"
            class="profile-card__avatar">
 
@@ -16,8 +16,8 @@
     </div>
 
     <div class="profile-card__tags">
-      @for (teams of profile.teams; track teams) {
-        <div class="teams-tag">{{ teams }}</div>
+      @for (stacks of profile.stack; track stacks) {
+        <div class="teams-tag">{{ stacks }}</div>
       }
     </div>
 
