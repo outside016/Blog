@@ -22,9 +22,9 @@ export class AuthService {
 
   refreshToken: string | null = null
 
-  get isAuth(){
+  get isAuth() {
 
-    if (!this.token){
+    if (!this.token) {
       this.token = this.cookieService.get('token')
       this.refreshToken = this.cookieService.get('refreshToken')
 
@@ -51,8 +51,23 @@ export class AuthService {
         return throwError(err)
       })
     )
-
   }
+
+  refreshAuthToken() {
+    return this.http.post<TokenResponse>(
+      `${this.baseApiUrl}refresh`,
+      {
+        refresh_token: this.refreshToken,
+      }
+    ).pipe(
+
+      catchError(err => {
+        this.logout()
+        return throwError(err)
+      })
+    )
+  }
+
 
   logout() {
     this.cookieService.deleteAll()
