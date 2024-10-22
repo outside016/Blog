@@ -1,1 +1,17 @@
-<p>sidebar works!</p>
+<img
+  src="/assets/svg/logo-small.svg"
+  alt="logo"
+  class="mb20 ml16">
+
+<nav>
+  <ul class="main-menu">
+    @for (menuItem of menuItems; track menuItem){
+    <li>
+      <button class="main-menu__item">
+        <svg [icon]="menuItem.icon" class="main-menu__svg"> </svg>
+        <span>{{menuItem.label}}</span>
+      </button>
+    </li>
+    }
+  </ul>
+</nav>
