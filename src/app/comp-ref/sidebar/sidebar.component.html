@@ -5,13 +5,36 @@
 
 <nav>
   <ul class="main-menu">
-    @for (menuItem of menuItems; track menuItem){
-    <li>
-      <button class="main-menu__item">
-        <svg [icon]="menuItem.icon" class="main-menu__svg"> </svg>
-        <span>{{menuItem.label}}</span>
-      </button>
-    </li>
+    @for (menuItem of menuItems; track menuItem) {
+      <li>
+        <button class="main-menu__item">
+          <svg [icon]="menuItem.icon" class="main-menu__svg"></svg>
+          <span>{{ menuItem.label }}</span>
+        </button>
+      </li>
     }
   </ul>
 </nav>
+
+<p class="medium-text mb20 mt20">Подписчики</p>
+
+@for (subscriber of subscribers$ | async; track subscriber.id) {
+  <app-subscriber-card
+    [profile]="subscriber"
+  ></app-subscriber-card>
+
+}
+
+<div class="mt20 to-subscribers">
+  <a
+    [routerLink]="['/subscribers']"
+    class="to-subscribers-link medium-text"
+  >Все подписчики
+  </a>
+  <svg
+    icon="arrow"
+    class="to-subscribers-icon"
+  ></svg>
+</div>
+
+
