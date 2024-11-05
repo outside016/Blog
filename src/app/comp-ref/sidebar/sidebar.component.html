@@ -43,9 +43,9 @@
 <footer class="sidebar__footer">
   @if(me(); as me){
     @if(me.avatarUrl){
-      <img [src]="me.avatarUrl" alt="avatar">
+      <img [src]="me.avatarUrl | imgUrl" alt="avatar">
     } @else {
-      <img class="sidebar__footer-img" src="/assets/imgs/avatar-placeholder.png" alt="avatar">
+      <img src="/assets/imgs/avatar-placeholder.png" alt="avatar">
     }
 
     <div class="medium-text sidebar__footer-username-text">{{me.username}}</div>
