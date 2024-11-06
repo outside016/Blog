@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, Renderer2} from '@angular/core';
 import {AvatarCircleComponent} from "../../../comp-ref/avatar-circle/avatar-circle.component";
 import {ProfileService} from "../../../data/services/profile.service";
 import {NgIf} from "@angular/common";
@@ -14,5 +14,12 @@ import {NgIf} from "@angular/common";
   styleUrl: './post-input.component.scss'
 })
 export class PostInputComponent {
-profile = inject(ProfileService).me
+  r2 = inject(Renderer2)
+  profile = inject(ProfileService).me
+
+  onTextAreaInput(event: Event) {
+    const textarea = event.target as HTMLTextAreaElement;
+
+    this.r2.setStyle(textarea, 'height', textarea.scrollHeight + 'px');
+  }
 }
