@@ -20,7 +20,7 @@ export class PostInputComponent {
   onTextAreaInput(event: Event) {
     const textarea = event.target as HTMLTextAreaElement;
 
-    this.r2.setStyle(textarea, 'height', 'auto');
+    this.r2.setStyle(textarea, 'height', 'auto' );
     this.r2.setStyle(textarea, 'height', textarea.scrollHeight + 'px');
   }
 }
