@@ -169,3 +169,18 @@ body {
   height: 84px;
   resize: none;
 }
+
+.btn-icon{
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-color);
+  color: var(--dark--color);
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--dark--color);
+}
+
+.svg16{
+  width: 16px;
+  height: 16px;
+}
