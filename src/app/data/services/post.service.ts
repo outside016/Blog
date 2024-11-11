@@ -1,7 +1,6 @@
 import {inject, Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {PostCreateDto} from "../interface/post.interface";
-import {Profile} from "../interface/profile.interface";
+import {Post, PostCreateDto} from "../interface/post.interface";
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +11,6 @@ export class PostService {
   #http = inject(HttpClient)
 
   createPost(payload: PostCreateDto){
-    return this.#http.post<Profile>(`${this.baseApiUrl}/post/`, payload)
+    return this.#http.post<Post>(`${this.baseApiUrl}post/`, payload)
   }
 }
