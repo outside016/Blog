@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {PostInputComponent} from "../post-input/post-input.component";
 import {PostComponent} from "../post/post.component";
+import {PostService} from "../../../data/services/post.service";
 
 @Component({
   selector: 'app-post-feed',
@@ -13,5 +14,8 @@ import {PostComponent} from "../post/post.component";
   styleUrl: './post-feed.component.scss'
 })
 export class PostFeedComponent {
+
+  PostService = inject(PostService)
+
 
 }
