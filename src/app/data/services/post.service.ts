@@ -1,7 +1,7 @@
 import {inject, Injectable, signal} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
 import {Post, PostCreateDto} from "../interface/post.interface";
-import {tap} from "rxjs";
+import {switchMap, tap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,12 @@ export class PostService {
 
   createPost(payload: PostCreateDto){
     return this.#http.post<Post>(`${this.baseApiUrl}post/`, payload)
+      .pipe(
+          switchMap(() => {
+            return this.fetchPosts()
+          })
+        )
+
   }
 
   fetchPosts(){

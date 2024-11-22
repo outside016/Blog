@@ -1,1 +1,16 @@
-<p>post works!</p>
+@if (post(); as post) {
+  <app-avatar-circle
+    class="size23"
+    [avatarUrl]="post.author.avatarUrl"
+  ></app-avatar-circle>
+
+
+<main class="post-body">
+  <div class="post-header">
+    <strong class="post__author">
+      {{ post.author.firstName }} {{ post.author.lastName }}
+      <span class="post-created-at">{{ post.createdAt | date: 'HH:mm dd.MM.YYYY'}}</span>
+    </strong>
+  </div>
+</main>
+}

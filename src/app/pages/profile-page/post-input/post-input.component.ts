@@ -39,6 +39,8 @@ export class PostInputComponent {
       title: 'Клевый пост',
       content: this.postText,
       authorId: this.profile()!.id
-    }))
+    })).then(()=>{
+      this.postText = ''
+    })
   }
 }
