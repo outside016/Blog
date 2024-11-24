@@ -4,6 +4,7 @@ import {AvatarCircleComponent} from "../../../comp-ref/avatar-circle/avatar-circ
 import {PostService} from "../../../data/services/post.service";
 import {DatePipe} from "@angular/common";
 import {SvgIconComponent} from "../../../comp-ref/svg-icon/svg-icon.component";
+import {PostInputComponent} from "../post-input/post-input.component";
 
 @Component({
   selector: 'app-post',
@@ -11,13 +12,15 @@ import {SvgIconComponent} from "../../../comp-ref/svg-icon/svg-icon.component";
   imports: [
     AvatarCircleComponent,
     DatePipe,
-    SvgIconComponent
+    SvgIconComponent,
+    PostInputComponent
   ],
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss'
 })
 export class PostComponent {
   post = input<Post>();
+
 
 
   postService = inject(PostService);
