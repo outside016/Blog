@@ -1,4 +1,4 @@
-import {Component, HostBinding, inject, input, Renderer2} from '@angular/core';
+import {Component, EventEmitter, HostBinding, inject, input, Output, Renderer2} from '@angular/core';
 import {AvatarCircleComponent} from "../../../comp-ref/avatar-circle/avatar-circle.component";
 import {ProfileService} from "../../../data/services/profile.service";
 import {NgIf} from "@angular/common";
@@ -28,10 +28,14 @@ export class PostInputComponent {
   profile = inject(ProfileService).me
   postText = ''
 
+
+  @Output() created = new EventEmitter()
+
   @HostBinding('class.comment')
   get isComment(){
     return this.isCommentInput()
   }
+
 
   onTextAreaInput(event: Event) {
     const textarea = event.target as HTMLTextAreaElement;
@@ -51,6 +55,7 @@ export class PostInputComponent {
         commentId: this.commentId()
       })).then(() => {
         this.postText = ''
+        this.created.emit()
       })
       return;
     }
