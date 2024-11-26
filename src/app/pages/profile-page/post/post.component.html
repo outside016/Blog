@@ -20,11 +20,11 @@
           icon="comment"
           class="svg16"
         ></svg>
-        <span class="comments-length">{{ post.comments.length }}</span>
+        <span class="comments-length">{{ comments().length }}</span>
       </span>
     </div>
 
-    <div class="post__comments-wrapper">
+    <div class="post__comments-wrapper" id="element">
       @for (comment of comments(); track comment.id){
       <app-comment
       [comment]="comment"

@@ -23,6 +23,7 @@
 
 .post-created-at{
   color: var(--light-transparent-color);
+  margin-right: 10px;
 }
 
 .comment-amount{
@@ -40,9 +41,12 @@
 }
 
 .post__comments-wrapper{
-  padding: 8px 0;
+  padding: 10px 5px 10px 0;
   display: grid;
   max-height: 150px;
   overflow-y: scroll;
   grid-gap: 8px;
+
 }
+
+

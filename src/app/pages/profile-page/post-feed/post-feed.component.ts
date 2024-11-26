@@ -1,8 +1,8 @@
-import {Component, inject} from '@angular/core';
+import {Component, ElementRef, HostListener, inject, Renderer2} from '@angular/core';
 import {PostInputComponent} from "../post-input/post-input.component";
 import {PostComponent} from "../post/post.component";
 import {PostService} from "../../../data/services/post.service";
-import {firstValueFrom} from "rxjs";
+import {firstValueFrom, fromEvent} from "rxjs";
 
 @Component({
   selector: 'app-post-feed',
@@ -20,8 +20,36 @@ export class PostFeedComponent {
 
   feed = this.postService.posts;
 
+  r2 = inject(Renderer2)
+
+  hostElement = inject(ElementRef);
+
+  @HostListener('window:resize')
+  onWindowResize() {
+    this.resizeFeed()
+  }
+
   constructor() {
-  firstValueFrom(this.postService.fetchPosts());
+    firstValueFrom(this.postService.fetchPosts());
+  }
+
+  ngAfterViewInit() {
+this.resizeFeed()
+
+    fromEvent(window, 'resize')
+      .subscribe(()=>{
+        console.log(231)
+      })
+  }
+
+  resizeFeed(){
+    {
+      const {top} = this.hostElement.nativeElement.getBoundingClientRect();
+
+      const height: number = window.innerHeight - top - 24 - 24
+      this.r2.setStyle(this.hostElement.nativeElement, 'height', `${height}px`);
+      console.log(height)
+    }
   }
 
 }
