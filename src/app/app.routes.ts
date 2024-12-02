@@ -13,6 +13,9 @@ export const routes: Routes = [
       {path: 'search', component: SearchPageComponent},
       {path: 'profile/:id', component: ProfilePageComponent},
       {path: 'settings', component: SettingsPageComponent},
+      {
+        path: 'chats',
+      }
     ],canActivate: [canActivateAuth]
   },
   {path: 'login', component: LoginPageComponent},
